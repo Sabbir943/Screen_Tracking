@@ -1,0 +1,55 @@
+TASK 1 — ORDER TRACKING SCREEN ⭐
+Objective
+
+Design and implement a modern, professional mobile Order Tracking screen for an e-commerce application.
+
+The current application only displays these order statuses:
+
+Processing
+Shipped
+Out for Delivery
+Delivered
+
+Users report that the current status is difficult to understand. Redesign and implement the experience so the delivery status is clear at a glance.
+
+Requirements
+
+The screen should include:
+
+Clear visual delivery progress/timeline
+Current order status
+Estimated delivery date/time
+Order/product summary
+Clear way to contact support
+Appropriate loading/empty/error states where relevant
+Responsive design for approximately 360–430px mobile widths
+Clean spacing, typography, hierarchy, and visual consistency
+Meaningful interactions such as:
+Viewing order details
+Contacting support
+Reporting a delivery issue
+Required Order States
+
+The UI must handle all three situations:
+
+1. Delayed Order
+
+The estimated delivery time has passed or the order is significantly delayed.
+
+Clearly communicate the delay and provide an appropriate next step.
+
+2. Delivered but Not Received
+
+The system says the order was delivered, but the customer reports that they did not receive it.
+
+Provide an appropriate next step or support action.
+
+3. Tracking Not Available Yet
+
+The order exists, but tracking information is not available yet.
+
+Avoid showing an empty or broken-looking screen.
+
+Important
+
+Show how the same product/order experience adapts to all three states.
