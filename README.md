@@ -1,16 +1,40 @@
-# React + Vite
+# Order Tracking
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A mobile order-tracking screen built with React (Vite) + Tailwind CSS, targeting 360–430px widths.
 
-Currently, two official plugins are available:
+Runs standalone with mock data and covers three states: **Delayed**, **Delivered but not received**, and **No tracking yet** — switchable via the demo preset bar at the top.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Getting started
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Scripts
 
-## Expanding the ESLint configuration
+- `npm run dev` — dev server with HMR
+- `npm run lint` — ESLint
+- `npm run build` — production build
+- `npm run preview` — serve the production build
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Structure
+
+```
+src/
+├── components/
+│   ├── tracking/        # OrderHeader, StatusHeroCard, TrackingTimeline,
+│   │                    # TrackingMapCard, OrderItemsSummary,
+│   │                    # SupportActionCard, IssueReportModal
+│   └── ui/              # Badge, Stepper
+├── mock/
+│   └── orderData.js     # ORDER_STATES + STAGES used by the UI
+├── App.jsx              # Composes the screen; owns state & modal
+└── index.css            # Tailwind v4 + custom animations
+```
+
+## Notes
+
+- All data is mock (`src/mock/orderData.js`); there is no backend or API layer yet.
+- The map in `TrackingMapCard` is a decorative SVG placeholder, not a real map library.
+- Spec details: `requirement.txt` (app's task description).
